@@ -1,5 +1,5 @@
 /* -------------
-    Prelaoder
+    Preloader
 ----------------*/
 
 #preloader {
@@ -25,28 +25,45 @@
     height: 60px;
     -webkit-animation: animate-preloader 1s linear infinite;
     animation: animate-preloader 1s linear infinite;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
-@-webkit-keyframes animate-preloader {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
 
 @keyframes animate-preloader {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
+        border-top: 6px solid #159c68;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        border-top: 6px solid #3d8a19;
+    }
+
+    75% {
+        border-top: 6px solid #bddb36;
+        transform: rotate(270deg);
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
     }
 
     100% {
-        -webkit-transform: rotate(360deg);
+        border-top: 6px solid #007bff;
         transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
     }
 }
